@@ -3,6 +3,6 @@ import { getTnxDataByData } from "../controllers/tnx.c";
 
 const router = express.Router();
 
-router.get("/:id", getTnxDataByData);
+router.get("/:url", getTnxDataByData);
 
 export default router;
