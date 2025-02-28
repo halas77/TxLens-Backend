@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 
 export const getTnxData = (req: Request, res: Response) => {
-  res.json({ message: "List of users" });
+  res.json({ message: "Transaction data" });
 };
 
 export const getUserById = (req: Request, res: Response) => {
