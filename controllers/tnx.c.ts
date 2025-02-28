@@ -1,10 +1,11 @@
 import { Request, Response } from "express";
+import { scrapeEtherscanTransaction } from "../utils/scraper";
+import { geminiSummary } from "../utils/summary";
 
-export const getTnxData = (req: Request, res: Response) => {
-  res.json({ message: "Transaction data" });
-};
-
-export const getUserById = (req: Request, res: Response) => {
+export const getTnxDataByData = async (req: Request, res: Response) => {
   const { id } = req.params;
-  res.json({ message: `User details for ID: ${id}` });
+  const url = `https://etherscan.io/tx/${id}`;
+  const transactionData = await scrapeEtherscanTransaction(url);
+  const aiSummary = await geminiSummary(transactionData);
+  res.json({ txData: transactionData, summary: aiSummary });
 };

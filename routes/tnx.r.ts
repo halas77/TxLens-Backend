@@ -1,8 +1,8 @@
 import express from "express";
-import { getTnxData } from "../controllers/tnx.c";
+import { getTnxDataByData } from "../controllers/tnx.c";
 
 const router = express.Router();
 
-router.get("/", getTnxData);
+router.get("/:id", getTnxDataByData);
 
 export default router;
