@@ -15,7 +15,7 @@ export async function geminiSummary(txData: any) {
 
     Format:
     1. Start with emoji relevant to transaction type
-    2. Use short paragraphs with key metrics
+    2. Use short paragraphs with key metrics and no title
     3. Add "ℹ️ Pro Tip:" section if gas fees seem high:
 
     ${JSON.stringify(txData, null, 2)}`;
