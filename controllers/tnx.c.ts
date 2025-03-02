@@ -8,7 +8,7 @@ export const getTnxData = async (req: Request, res: Response) => {
     res.status(400).json({ error: "URL is required", data: null });
   }
   const transactionData = await scrapeEtherscanTransaction(url);
-  const aiSummary = await geminiSummary(transactionData);
+  const aiSummary = await geminiSummary(transactionData, url);
   res.json({
     success: true,
     data: { txData: transactionData, summary: aiSummary },
