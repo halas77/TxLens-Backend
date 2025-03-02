@@ -42,6 +42,6 @@ export async function geminiSummary(txData: any, url: string) {
 
     return result.response.text();
   } else {
-    return "Oops!😔 I can't analyze this URL. Please provide a valid transaction or address URL.";
+    return "Oops!😔 I can't analyze this URL. Please provide a valid transaction or address URL. (example: etherscan.io/tx/0x538..  OR etherscan.io/address/0x538..  )";
   }
 }
