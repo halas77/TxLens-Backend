@@ -18,5 +18,12 @@ export const extractRelevantData = async ($: any) => {
     `;
   const result = await model.generateContent(prompt);
   return result.response.text();
-
 };
+
+export function formatSummary(text: string): string {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, "<b  className='text-semibold'>$1</b>")
+    .replace(/\*(.*?)\*/g, "<i className='italic'>$1</i>")
+    .replace(/`(.*?)`/g, "<code>$1</code>")
+    .replace(/\n/g, "<br>");
+}

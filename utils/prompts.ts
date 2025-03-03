@@ -1,4 +1,4 @@
-export const tnxPrompt = `Analyze this Ethereum transaction and create a concise summary.
+export const tnxPrompt = `Analyze this Ethereum transaction and create a concise summary in paragraph format.
 Focus on:
 - From/To addresses with context clues
 - ETH/USD value + direction
@@ -12,7 +12,7 @@ Format:
 2. summary with key metrics
 3. Add "ℹ️ Pro Tip:" if gas > $50 or failed tx`;
 
-export const blockPrompt = `Summarize this Ethereum block data clearly.
+export const blockPrompt = `Summarize this Ethereum block data clearly in paragraph format.
 Focus on:
 - Block number/age
 - Miner/validator
@@ -27,7 +27,7 @@ Format:
 3. Add "ℹ️ Pro Tip:" if empty block or >$10k rewards
 `;
 
-export const addressPrompt = `Explain this Ethereum address simply.
+export const addressPrompt = `Explain this Ethereum address simply in paragraph format.
 Focus on:
 - ETH balance (USD value)
 - Transaction count
@@ -42,7 +42,7 @@ Format:
 3. Add "ℹ️ Pro Tip:" if inactive >1yr or holds NFTs
 `;
 
-export const tokenPrompt = `Break down this token/NFT information.
+export const tokenPrompt = `Break down this token/NFT information in paragraph format.
 Focus on:
 - Token type (ERC-20/721/1155)
 - Market data (price/MCAP)
