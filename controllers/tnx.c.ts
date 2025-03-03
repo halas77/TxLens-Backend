@@ -18,8 +18,8 @@ export const getTnxData = async (req: Request, res: Response) => {
       return;
     }
 
-    const transactionData = await extractTextFromHTML(url);
-    const aiSummary = await geminiSummary(transactionData, url);
+    const extracttedData = await extractTextFromHTML(url);
+    const aiSummary = await geminiSummary(extracttedData, url);
     const formattedSummary = formatSummary(aiSummary);
 
     res.json({
